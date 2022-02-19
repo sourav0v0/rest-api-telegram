@@ -24,7 +24,7 @@ def verify():
 @app.route("/getfact",methods=['POST'])
 def getFact():
     req = request.get_json()
-    intent = req.get("queryResult").get("intent").get("displayName")
+    intent = req.get("queryResult").get("parameters").get("displayName")
     number = req.get("queryResult").get("parameters").get("number")
     qtype = req.get("queryResult").get("parameters").get("type")
     number2 = req.get("queryResult").get("parameters").get("number2")
